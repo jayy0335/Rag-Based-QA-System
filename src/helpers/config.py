@@ -22,7 +22,7 @@ NAMESPACE = "faq"
 
 # File Paths
 DATA_DIR = BASE_DIR / "data"
-FAQ_CSV_PATH = DATA_DIR / "cleaned_faq.csv"
+FAQ_CSV_PATH = DATA_DIR / "faqs.csv"
 
 # Ensure data directory exists
 DATA_DIR.mkdir(parents=True, exist_ok=True)

@@ -9,6 +9,7 @@ from src.helpers.config import (
     NAMESPACE,
     FAQ_CSV_PATH
 )
+from src.helpers.del_embed import clear_pinecone_namespace
 
 
 def initialize_pinecone_index():
@@ -41,6 +42,8 @@ def load_and_index_data():
     try:
         # Initialize Pinecone index
         idx = initialize_pinecone_index()
+
+        clear_pinecone_namespace()
         
         # Load the CSV file
         if not FAQ_CSV_PATH.exists():
